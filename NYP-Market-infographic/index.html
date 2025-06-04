@@ -366,6 +366,12 @@
     const egg = document.getElementById('easterEgg');
     egg.addEventListener('click', () => egg.classList.toggle('active'));
     egg.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ egg.classList.toggle('active'); }});
+    // Service Worker registration for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
   </script>
 </body>
 </html>
