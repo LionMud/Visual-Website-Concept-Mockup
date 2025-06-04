@@ -12,15 +12,30 @@
   port = 8888
   autoLaunch = true
 
+# API routes to Netlify Functions
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
+# Next.js SSR/ISR/404 support
+[[redirects]]
+  from = "/_next/*"
+  to = "/_next/:splat"
+  status = 200
+
+# Serve static files and Next.js pages
+[[redirects]]
+  from = "/static/*"
+  to = "/static/:splat"
+  status = 200
+
+# Fallback to Next.js for all other routes (including 404)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
 
 [functions]
   node_bundler = "esbuild"
