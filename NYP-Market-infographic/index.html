@@ -8,370 +8,365 @@
     body {
       font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
       background: linear-gradient(120deg, #ffe082 0%, #fffbe6 50%, #e63946 100%);
-      background-size: 200% 200%;
-      animation: bgmove 8s ease-in-out infinite alternate;
-      color: #222;
       margin: 0;
     }
-    @keyframes bgmove {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+    /* General Styles */
+    h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
     }
-    .moodboard {
+    a {
+      text-decoration: none;
+    }
+    /* Hero Section */
+    #hero {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      margin: 2rem 0;
+      min-height: 60vh;
+      background: #111 url('/images/pizzamafia_img-000.png') center/cover no-repeat;
+      position: relative;
+      color: #fff;
+      text-align: center;
     }
-    .swatch {
-      width: 60px; height: 60px; border-radius: 8px; display: inline-block; margin: 0 8px 8px 0; border: 2px solid #2222;
-    }
-    .swatch.red { background: #e63946; }
-    .swatch.yellow { background: #ffe082; }
-    .swatch.navy { background: #222; }
-    .swatch.white { background: #fff; border: 2px solid #eee; }
-    .swatch.green { background: #4caf50; }
-    .font-sample {
-      font-family: 'Impact', 'Arial Black', Arial, sans-serif;
-      font-size: 2rem;
-      color: #e63946;
+    #hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.2rem;
+      text-shadow: 2px 2px 0 #e63946, 0 4px 24px #000a;
+      letter-spacing: 2px;
       margin-bottom: 0.5rem;
     }
-    .moodboard img.urban-img, .moodboard img.pizza-img {
-      border: 3px solid #e63946;
-      box-shadow: 0 4px 16px #e6394622;
-      transition: transform 0.2s;
+    #hero p {
+      font-size: 1.4rem;
+      color: #ffe082;
+      margin-bottom: 2rem;
     }
-    .moodboard img.urban-img:hover, .moodboard img.pizza-img:hover {
-      transform: scale(1.05) rotate(-2deg);
-    }
-    .mascot-img {
-      width: 100px; height: 100px; border-radius: 50%; border: 3px solid #e63946; background: #fffbe6; display: flex; align-items: center; justify-content: center; font-size: 3rem;
-      box-shadow: 0 4px 16px #e6394640;
-      transition: transform 0.2s;
-    }
-    .mascot-img:hover {
-      transform: scale(1.1) rotate(3deg);
-    }
-    .section-block {
-      border: 2px dashed #e63946;
-      border-radius: 12px;
-      margin: 2rem auto;
-      max-width: 600px;
-      background: #fff;
-      padding: 1.5rem;
-      position: relative;
-      box-shadow: 0 2px 12px #e6394612;
-    }
-    .section-title {
-      font-family: 'Impact', 'Arial Black', Arial, sans-serif;
+    #hero a {
+      background: #ffe082;
       color: #e63946;
-      letter-spacing: 1px;
-      margin-bottom: 0.5em;
-      text-shadow: 1px 1px 0 #fffbe6, 2px 2px 0 #e6394622;
-    }
-    .mascot-corner {
-      position: absolute;
-      top: -40px; right: -40px;
-      width: 80px; height: 80px;
-      background: #fffbe6;
-      border-radius: 50%;
-      border: 3px solid #e63946;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem;
-      box-shadow: 0 2px 8px #0002;
-    }
-    .section-divider {
-      border: none;
-      border-top: 2px dashed #e63946;
-      margin: 2.5rem auto 2rem auto;
-      width: 60%;
-      opacity: 0.4;
-    }
-    .easter-egg {
-      text-align: right;
-      font-style: italic;
-      color: #e63946;
-      background: #fffbe6;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      margin-top: 1rem;
-      box-shadow: 0 2px 8px #e6394622;
-    }
-    .order-btn {
-      background:#e63946;color:#fff;border:none;padding:1rem 2rem;border-radius:8px;font-size:1.2rem;cursor:pointer;font-weight:bold;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 2px 8px #e6394633;
-    }
-    .order-btn:hover {
-      transform: scale(1.07);
-      box-shadow: 0 6px 24px #e6394644;
-    }
-    .fade-in {
-      opacity: 0;
-      animation: fadein 1.2s 0.2s forwards;
-    }
-    @keyframes fadein {
-      to { opacity: 1; }
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #fffbe6cc;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.7rem 0 0.5rem 0;
-      box-shadow: 0 2px 8px #e6394612;
-      font-family: 'Impact', 'Arial Black', Arial, sans-serif;
-      font-size: 1.1rem;
-    }
-    .sticky-nav a {
-      color: #e63946;
-      text-decoration: none;
       font-weight: bold;
-      padding: 0.2rem 0.7rem;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
+      padding: 1rem 2.5rem;
+      border-radius: 2rem;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+      display: inline-block;
     }
-    .sticky-nav a:hover, .sticky-nav a.active {
+    #hero a:hover {
+      transform: scale(1.05);
+    }
+    /* Menu Section */
+    #menu {
+      background: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    #menu h2 {
+      font-family: 'Cinzel', serif;
+      color: #e63946;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+    #menu .menu-item {
+      background: #ffe082;
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      min-width: 220px;
+      box-shadow: 0 2px 8px #e6394622;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      margin: 0 1rem;
+    }
+    #menu .menu-item.vegan {
       background: #e63946;
       color: #fff;
     }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0; top: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.7);
+    /* About Section */
+    #about {
+      background: linear-gradient(90deg, #ffe082 60%, #e63946 100%);
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 3rem;
     }
-    .lightbox.active {
-      display: flex;
-    }
-    .lightbox-img {
-      max-width: 90vw;
-      max-height: 80vh;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px #0008;
-      border: 4px solid #fffbe6;
-      background: #fff;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 2rem; right: 2rem;
-      font-size: 2.5rem;
-      color: #fffbe6;
-      cursor: pointer;
-      font-weight: bold;
-      text-shadow: 0 2px 8px #000a;
-      z-index: 10001;
-    }
-    @media (max-width: 700px) {
-      .moodboard { flex-direction: column; align-items: center; }
-      .section-block { max-width: 98vw; padding: 1rem; }
-      .sticky-nav { font-size: 1rem; gap: 1rem; }
-    }
-    .mascot-img.animated {
-      animation: mascot-bounce 1.2s infinite alternate cubic-bezier(.5,1.5,.5,1);
-    }
-    @keyframes mascot-bounce {
-      0% { transform: scale(1) translateY(0); }
-      60% { transform: scale(1.1) translateY(-10px) rotate(-3deg); }
-      100% { transform: scale(1.05) translateY(-5px) rotate(3deg); }
-    }
-    .easter-egg-reveal {
-      display: none;
-      margin-top: 0.5rem;
+    #about h2 {
+      font-family: 'Cinzel', serif;
       color: #222;
-      background: #ffe082;
-      border-radius: 6px;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      box-shadow: 0 2px 8px #e6394612;
-      animation: fadein 0.7s;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    .easter-egg.active .easter-egg-reveal {
-      display: block;
+    #about p {
+      font-size: 1.1rem;
+      color: #e63946;
+      font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    }
+    #about ul {
+      color: #222;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+    /* Order Section */
+    #order {
+      background: #fffbe6;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    #order h2 {
+      font-family: 'Cinzel', serif;
+      color: #e63946;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    #order a {
+      background: #e63946;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      margin: 0.5rem 0;
+    }
+    /* Family Rules Section */
+    #family-rules {
+      background: #e63946;
+      color: #fff;
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    #family-rules h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #family-rules ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.1rem;
+      display: inline-block;
+      text-align: left;
+      max-width: 400px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    /* Mascot Section */
+    #mascot {
+      background: transparent;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    #mascot .mascot-img {
+      display: inline-block;
+      background: #fffbe6;
+      border-radius: 50%;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px #e6394622;
+      position: relative;
+    }
+    #mascot .mascot-img .qr-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: #e63946;
+      color: #fff;
+      border-radius: 50%;
+      padding: 0.5rem 0.8rem;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 8px #e6394622;
+    }
+    /* Loyalty Section */
+    #loyalty {
+      background: #ffe082;
+      padding: 2.5rem 0;
+      text-align: center;
+    }
+    #loyalty h2 {
+      font-family: 'Cinzel', serif;
+      color: #e63946;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #loyalty .loyalty-item {
+      background: #fffbe6;
+      border-radius: 18px;
+      padding: 1.5rem 2rem;
+      min-width: 220px;
+      box-shadow: 0 2px 8px #e6394622;
+      margin: 1rem;
+      display: inline-block;
+      text-align: left;
+      color: #222;
+    }
+    #loyalty .loyalty-item.witness {
+      background: #e63946;
+      color: #fff;
+    }
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ffe082;
+      padding: 2rem 0;
+      text-align: center;
+      font-size: 1.1rem;
+      position: relative;
+    }
+    footer a {
+      color: #e63946;
+    }
+    /* Animations */
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadein 1.2s forwards;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about img {
+        max-width: 100%;
+        height: auto;
+      }
+      #menu .menu-item {
+        flex: 1 1 100%;
+        max-width: 300px;
+      }
+      #order a {
+        width: 100%;
+        max-width: 300px;
+      }
+      #family-rules ul {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <nav class="sticky-nav" aria-label="Main Navigation">
-    <a href="#hero" id="nav-hero">Hero</a>
-    <a href="#menu" id="nav-menu">Menu</a>
-    <a href="#about" id="nav-about">About</a>
-    <a href="#order" id="nav-order">Order</a>
-    <a href="#location" id="nav-location">Location</a>
-  </nav>
-  <!-- MOODBOARD: Fonts, Colors, Images -->
-  <div class="moodboard">
-    <div>
-      <div class="font-sample">NY Pizza Curacao</div>
-      <div class="img-label">Font: Impact / Arial Black</div>
+  <!-- Hero Block -->
+  <section id="hero">
+    <div style="position:absolute;top:2rem;left:2rem;background:#e63946;border-radius:50%;width:90px;height:90px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px #0008;z-index:2;">
+      <span style="font-size:3rem;">🍕</span>
     </div>
-    <div>
-      <div class="swatch red"></div>
-      <div class="swatch yellow"></div>
-      <div class="swatch navy"></div>
-      <div class="swatch white"></div>
-      <div class="swatch green"></div>
-      <div class="img-label">Color palette: Red, Yellow, Navy, White, Green</div>
-    </div>
-    <div>
-      <img class="urban-img lightboxable" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="NYC Urban" tabindex="0" />
-      <div class="img-label">Urban NYC reference</div>
-    </div>
-    <div>
-      <img class="pizza-img lightboxable" src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Pizza" tabindex="0" />
-      <div class="img-label">Pizza imagery</div>
-    </div>
-    <div>
-      <div class="mascot-img animated" aria-label="Tony the Slice, mascot" tabindex="0">🍕</div>
-      <div class="img-label">Mascot: Tony the Slice</div>
-    </div>
-  </div>
+    <h1>Pizza Mafia Curaçao</h1>
+    <p>Confident. Cheeky. Local-slick. <span style="color:#e63946;">NYC street meets Curaçao flavor.</span></p>
+    <a href="#menu">See the Menu</a>
+    <div style="position:absolute;bottom:2rem;right:2rem;background:#fffbe6;border-radius:16px;padding:0.7rem 1.2rem;box-shadow:0 2px 8px #e6394622;font-size:1.1rem;color:#e63946;font-family:'Cinzel',serif;">Scan QR to Order <span style="font-size:1.5rem;">📱</span></div>
+  </section>
 
-  <!-- HOMEPAGE STRUCTURE MOCKUP -->
-  <div class="section-block" id="hero" style="margin-top:3rem;">
-    <div class="mascot-corner">🍕</div>
-    <h2 class="section-title">Hero Section</h2>
-    <p><strong>Tagline:</strong> "Welcome to the Slice Life!"</p>
-    <p><strong>Image:</strong> Hero pizza or mascot image here</p>
-    <p><strong>Vibe:</strong> Bold, cheeky, NY attitude, Curaçao flavor</p>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="menu">
-    <h3 class="section-title">Menu Preview</h3>
-    <ul>
-      <li>Classic NY Cheese</li>
-      <li>Pepperoni Power</li>
-      <li>Island Special</li>
-      <li>Vegan Supreme</li>
-    </ul>
-    <div class="img-label">Food images or menu illustrations here</div>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="about">
-    <h3 class="section-title">About the Brand / Story</h3>
-    <p>NY Pizza Curacao brings the grit, humor, and heart of NYC to the Caribbean. Our mascot, Tony the Slice, is always up for a laugh and a story. We’re bold, we’re local, and we don’t take ourselves too seriously—except when it comes to pizza.</p>
-    <div class="img-label">Brand story visuals, references, or mascot art here</div>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="order">
-    <h3 class="section-title">Order Now</h3>
-    <button class="order-btn" id="orderBtn" aria-label="Order Now">Order Now</button>
-    <div class="img-label">Order button prominent, playful style</div>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="location">
-    <h3 class="section-title">Location / Our Story</h3>
-    <p>📍 123 Main Street, Willemstad, Curaçao</p>
-    <div class="img-label">Map or location image here</div>
-  </div>
-  <div class="section-block easter-egg" id="easterEgg" tabindex="0" aria-label="Tony the Slice Easter Egg" style="cursor:pointer;">
-    👋 “Yo! Don’t forget to try the Island Special!” – Tony the Slice
-    <div class="img-label">Mascot shoutout / Easter egg</div>
-    <div class="easter-egg-reveal" id="eggReveal">🍕 Pssst... Ask for the secret garlic crust! 🧄</div>
-  </div>
-  <div class="fade-in" style="text-align:center; color:#e63946; font-size:1.5rem; margin:2rem 0;">
-    🚀 TEST: If you see this, the deploy is working at {DEPLOY_TIME}.
-  </div>
-  <div class="section-block" id="team">
-    <h3 class="section-title">Meet the Team</h3>
-    <ul>
-      <li><strong>Vito "The Don" Rossi</strong> – Founder & Pizza Boss</li>
-      <li><strong>Maria "The Sauce" Russo</strong> – Head Chef</li>
-      <li><strong>Sal "The Slicer" Romano</strong> – Delivery King</li>
-      <li><strong>Tony the Slice</strong> – Mascot & Hype Man</li>
-    </ul>
-    <div class="img-label">Team photos or illustrations here</div>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="gallery">
-    <h3 class="section-title">Gallery</h3>
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
-      <img src="/images/pizzamafia_img-000.png" alt="Pizza Mafia Gallery 1" style="width:160px;border-radius:12px;box-shadow:0 2px 8px #e6394622;" />
-      <img src="/images/pizzamafia_img-001.png" alt="Pizza Mafia Gallery 2" style="width:160px;border-radius:12px;box-shadow:0 2px 8px #e6394622;" />
+  <!-- Menu Block -->
+  <section id="menu" style="background:#fff;padding:3rem 0;">
+    <h2 style="font-family:'Cinzel',serif;color:#e63946;font-size:2.2rem;text-align:center;margin-bottom:2rem;">Menu Highlights</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+      <div class="menu-item">
+        <div style="font-size:2rem;">👑</div>
+        <div style="font-weight:bold;">Boss Selections</div>
+        <div style="font-size:1rem;color:#e63946;">Signature pies</div>
+      </div>
+      <div class="menu-item witness">
+        <div style="font-size:2rem;">🕵️‍♂️</div>
+        <div style="font-weight:bold;">Witness Protection Pizza</div>
+        <div style="font-size:1rem;color:#e63946;">Secret QR-only pie</div>
+      </div>
+      <div class="menu-item vegan">
+        <div style="font-size:2rem;">🌱</div>
+        <div style="font-weight:bold;">Vegan Supreme</div>
+        <div style="font-size:1rem;">Plant-based, mafia-approved</div>
+      </div>
+      <div class="menu-item">
+        <div style="font-size:2rem;">🌊</div>
+        <div style="font-weight:bold;">Sleeping with the Fishes</div>
+        <div style="font-size:1rem;color:#e63946;">Seafood pie</div>
+      </div>
     </div>
-    <div class="img-label">More photos coming soon!</div>
-  </div>
-  <hr class="section-divider" />
-  <div class="section-block" id="faq">
-    <h3 class="section-title">FAQ</h3>
-    <ul>
-      <li><strong>Do you deliver?</strong> Yes, island-wide!</li>
-      <li><strong>Do you have vegan options?</strong> Absolutely. Try our Vegan Supreme!</li>
-      <li><strong>Can I order online?</strong> Online ordering is coming soon. Stay tuned!</li>
-      <li><strong>How do I join the Pizza Mafia?</strong> Ask Tony the Slice for the secret handshake 🍕🤫</li>
-    </ul>
-  </div>
-  <!-- TODO: Add more images, font samples, and color swatches as needed for moodboard -->
-  <!-- Lightbox Modal -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
-    <span class="lightbox-close" id="lightboxClose" tabindex="0" aria-label="Close preview">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Preview" />
-  </div>
+    <div style="text-align:center;margin-top:2rem;font-size:1.1rem;color:#888;">Hover for jokes &amp; mafia tips!</div>
+  </section>
 
-  <script>
-    // Smooth scroll nav active state
-    const navLinks = document.querySelectorAll('.sticky-nav a');
-    const sections = ['hero','menu','about','order','location'].map(id => document.getElementById(id));
-    window.addEventListener('scroll', () => {
-      let scrollPos = window.scrollY + 120;
-      let activeIdx = 0;
-      sections.forEach((sec, i) => {
-        if (sec && sec.offsetTop <= scrollPos) activeIdx = i;
-      });
-      navLinks.forEach((a,i) => a.classList.toggle('active', i===activeIdx));
-    });
-    // Order Now button scrolls to order section
-    document.getElementById('orderBtn').onclick = () => {
-      document.getElementById('order').scrollIntoView({behavior:'smooth'});
-    };
-    // Lightbox for moodboard images
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-    document.querySelectorAll('.lightboxable').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-        lightboxImg.alt = img.alt;
-        lightboxImg.focus();
-      });
-      img.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          lightboxImg.src = img.src;
-          lightbox.classList.add('active');
-          lightboxImg.alt = img.alt;
-          lightboxImg.focus();
-        }
-      });
-    });
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      lightboxImg.src = '';
-    }
-    lightboxClose.onclick = closeLightbox;
-    lightboxClose.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ closeLightbox(); }});
-    lightbox.addEventListener('click', e => { if(e.target===lightbox) closeLightbox(); });
-    // Easter egg reveal
-    const egg = document.getElementById('easterEgg');
-    egg.addEventListener('click', () => egg.classList.toggle('active'));
-    egg.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ egg.classList.toggle('active'); }});
-    // Service Worker registration for PWA
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
-    }
-  </script>
+  <!-- About Block -->
+  <section id="about" style="background:linear-gradient(90deg,#ffe082 60%,#e63946 100%);padding:3rem 0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:3rem;">
+    <div style="flex:1;max-width:400px;text-align:right;">
+      <img src="/images/pizzamafia_img-001.png" alt="NYC to Curaçao" style="width:100%;border-radius:18px;box-shadow:0 2px 12px #e6394622;filter:grayscale(0.2) contrast(1.1);" />
+    </div>
+    <div style="flex:2;max-width:500px;">
+      <h2 style="font-family:'Cinzel',serif;color:#222;font-size:2rem;margin-bottom:1rem;">Our Story</h2>
+      <p style="font-size:1.1rem;color:#e63946;font-family:'Arial Rounded MT Bold',Arial,sans-serif;">Born from the streets of NYC, raised on the beaches of Curaçao. Pizza Mafia fuses bold New York attitude with island flavor, humor, and loyalty. We’re not just a pizza shop — we’re a family.</p>
+      <ul style="color:#222;font-size:1rem;margin-top:1rem;">
+        <li>NYC grit meets Curaçao Carnival color</li>
+        <li>QR/WhatsApp ordering for locals & tourists</li>
+        <li>Secret menu, digital drops, and mafia humor</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Order Block -->
+  <section id="order" style="background:#fffbe6;padding:3rem 0;text-align:center;">
+    <h2 style="font-family:'Cinzel',serif;color:#e63946;font-size:2rem;margin-bottom:1.5rem;">Order Your Slice</h2>
+    <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;">
+      <a href="#" style="background:#e63946;color:#fff;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 8px #e6394622;display:flex;align-items:center;gap:0.7rem;"><span>QR Code</span> <span style="font-size:1.5rem;">📱</span></a>
+      <a href="#" style="background:#ffe082;color:#e63946;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 8px #e6394622;display:flex;align-items:center;gap:0.7rem;"><span>WhatsApp</span> <span style="font-size:1.5rem;">💬</span></a>
+      <a href="#" style="background:#222;color:#ffe082;padding:1rem 2rem;border-radius:2rem;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 8px #e6394622;display:flex;align-items:center;gap:0.7rem;"><span>Sentoo</span> <span style="font-size:1.5rem;">🚀</span></a>
+    </div>
+    <div style="margin-top:1.5rem;color:#888;font-size:1rem;">Order in seconds — no stress, just sauce.</div>
+  </section>
+
+  <!-- Family Rules Block -->
+  <section id="family-rules" style="background:#e63946;color:#fff;padding:2.5rem 0;text-align:center;">
+    <h2 style="font-family:'Cinzel',serif;font-size:2rem;margin-bottom:1rem;">Mafia Family Rules</h2>
+    <div style="display:inline-block;background:#111;border-radius:18px;padding:1.5rem 2.5rem;box-shadow:0 2px 8px #0008;">
+      <ul style="list-style:none;padding:0;margin:0;font-size:1.1rem;">
+        <li style="margin-bottom:0.7rem;">“Don’t snitch on the recipe.”</li>
+        <li style="margin-bottom:0.7rem;">“You fold it, you earn it.”</li>
+        <li style="margin-bottom:0.7rem;">“No stress. Just sauce.”</li>
+        <li style="margin-bottom:0.7rem;">“If you know, you know.”</li>
+        <li style="margin-bottom:0.7rem;">“The Don always gets the first slice.”</li>
+        <li>“Every pie tells a story.”</li>
+      </ul>
+    </div>
+    <div style="margin-top:1.5rem;color:#ffe082;font-size:1rem;">Street code — you’ll see these on posters, menus, and pizza boxes.</div>
+  </section>
+
+  <!-- Mascot Moment Block -->
+  <section id="mascot" style="background:transparent;padding:2rem 0;text-align:center;">
+    <div style="display:inline-block;background:#fffbe6;border-radius:50%;padding:1.5rem;box-shadow:0 2px 8px #e6394622;position:relative;">
+      <span style="font-size:3.5rem;">🍕</span>
+      <span style="position:absolute;bottom:-1.5rem;right:-1.5rem;background:#e63946;color:#fff;border-radius:50%;padding:0.5rem 0.8rem;font-size:1.2rem;box-shadow:0 2px 8px #e6394622;">QR</span>
+    </div>
+    <div style="margin-top:1rem;font-size:1.1rem;color:#e63946;">Tony the Slice — always watching, always hungry.</div>
+    <div style="margin-top:0.5rem;color:#888;font-size:0.95rem;">(Mascot reacts to scroll &amp; hovers. Find the hidden Easter egg!)</div>
+  </section>
+
+  <!-- Loyalty/Promo Block -->
+  <section id="loyalty" style="background:#ffe082;padding:2.5rem 0;text-align:center;">
+    <h2 style="font-family:'Cinzel',serif;color:#e63946;font-size:2rem;margin-bottom:1rem;">Loyalty &amp; Secret Drops</h2>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;">
+      <div class="loyalty-item">
+        <div style="font-size:1.3rem;font-weight:bold;color:#e63946;">Made Men Club</div>
+        <div style="color:#222;font-size:1rem;">Earn rewards, get early access to secret pies.</div>
+      </div>
+      <div class="loyalty-item witness">
+        <div style="font-size:1.3rem;font-weight:bold;">Witness Protection Pizza</div>
+        <div style="color:#ffe082;font-size:1rem;">Scan the QR. If you know, you know.</div>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;color:#888;font-size:1rem;">Scarcity, digital drops, and secret menu items — just like streetwear culture.</div>
+  </section>
+
+  <!-- Footer Block -->
+  <footer style="background:#111;color:#ffe082;padding:2rem 0;text-align:center;font-size:1.1rem;position:relative;">
+    <div style="margin-bottom:1rem;">Contact: <a href="mailto:info@pizzamafiacuracao.com" style="color:#e63946;">info@pizzamafiacuracao.com</a> | <span>📍 123 Main Street, Willemstad, Curaçao</span></div>
+    <div style="margin-bottom:1rem;">Hours: 11am – 11pm | <a href="#" style="color:#e63946;">Instagram</a> | <a href="#" style="color:#e63946;">WhatsApp</a></div>
+    <div style="color:#e63946;font-size:1rem;">“No stress. Just sauce.”</div>
+    <div style="position:absolute;bottom:1rem;right:2rem;font-size:1.2rem;color:#ffe082;opacity:0.7;">🍕</div>
+  </footer>
 </body>
 </html>
