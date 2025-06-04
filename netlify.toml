@@ -1,9 +1,39 @@
-[build]
-  publish = "NYP-Market-infographic"
-# command = "npm run build"
+# Netlify configuration for The Pizza Mafia
+# Modern Next.js/React, SPA routing, functions, and CMS
 
-# [dev]
-#   command = "npm run dev"
-#   port = 3000
-#   targetPort = 3000
-#   framework = "next"
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+[dev]
+  command = "npm run dev"
+  targetPort = 3000
+  port = 8888
+  autoLaunch = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  NEXT_PUBLIC_SITE_URL = "https://thepizzamafia.netlify.app"
+
+[context.deploy-preview.environment]
+  NODE_ENV = "development"
+
+# Netlify CMS (optional, for /admin)
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
