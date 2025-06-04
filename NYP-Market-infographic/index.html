@@ -264,6 +264,37 @@
     <div style="position:absolute;bottom:2rem;right:2rem;background:#fffbe6;border-radius:16px;padding:0.7rem 1.2rem;box-shadow:0 2px 8px #e6394622;font-size:1.1rem;color:#e63946;font-family:'Cinzel',serif;">Scan QR to Order <span style="font-size:1.5rem;">📱</span></div>
   </section>
 
+  <!-- Mafia Name Generator (CEO Demo Block) -->
+  <section id="mafia-name" style="background:#ffe082;padding:2.5rem 0;text-align:center;">
+    <h2 style="font-family:'Cinzel',serif;color:#e63946;font-size:2rem;margin-bottom:1rem;">Create Your Mafia Name</h2>
+    <p style="color:#222;font-size:1.1rem;margin-bottom:1.5rem;">Enter your name and get your custom Pizza Mafia nickname, powered by AI. (Demo: Real interaction, CEO-ready!)</p>
+    <form id="mafiaNameForm" style="display:inline-flex;flex-direction:column;align-items:center;gap:1rem;max-width:400px;margin:auto;">
+      <input name="realName" placeholder="Your real name" required style="padding:0.7rem 1.2rem;border-radius:1rem;border:1px solid #e63946;font-size:1.1rem;width:100%;max-width:300px;" />
+      <button type="submit" style="background:#e63946;color:#fff;padding:0.7rem 2rem;border-radius:2rem;font-size:1.1rem;font-family:'Cinzel',serif;border:none;cursor:pointer;box-shadow:0 2px 8px #e6394622;">Get Mafia Name</button>
+    </form>
+    <div id="mafiaNameResult" style="margin-top:1.2rem;font-size:1.2rem;color:#e63946;font-family:'Cinzel',serif;"></div>
+    <script>
+      document.getElementById('mafiaNameForm').onsubmit = async function(e) {
+        e.preventDefault();
+        const name = this.realName.value.trim();
+        if (!name) return;
+        const resultDiv = document.getElementById('mafiaNameResult');
+        resultDiv.textContent = 'Generating your mafia name...';
+        try {
+          const res = await fetch('/.netlify/functions/openai', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: `Give me a fun, mafia-style nickname for someone named ${name}, themed for a pizza shop in Curaçao. Make it local, cheeky, and memorable. Respond with only the nickname.` })
+          });
+          const data = await res.json();
+          resultDiv.textContent = data.result || 'Your mafia name: (error)';
+        } catch (err) {
+          resultDiv.textContent = 'Sorry, something went wrong.';
+        }
+      };
+    </script>
+  </section>
+
   <!-- Menu Block -->
   <section id="menu" style="background:#fff;padding:3rem 0;">
     <h2 style="font-family:'Cinzel',serif;color:#e63946;font-size:2.2rem;text-align:center;margin-bottom:2rem;">Menu Highlights</h2>
