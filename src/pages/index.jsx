@@ -9,6 +9,7 @@ import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import MafiaNameForm from '../components/MafiaNameForm';
 import DalleImageDemo from '../components/DalleImageDemo';
+import ReportViewer from '../components/ReportViewer';
 
 export default function Home() {
   return (
@@ -45,6 +46,9 @@ export default function Home() {
 
       {/* Contact/Order Form */}
       <ContactSection />
+
+      {/* Interactive Research Report */}
+      <ReportViewer />
 
       {/* Footer */}
       <Footer />
