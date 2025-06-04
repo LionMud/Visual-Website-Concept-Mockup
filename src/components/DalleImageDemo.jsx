@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from '../styles/PizzaMafiaHome.module.css';
 
 const DalleImageDemo = () => {
   const [prompt, setPrompt] = useState("");
@@ -34,25 +35,25 @@ const DalleImageDemo = () => {
   };
 
   return (
-    <div className="dalle-demo">
-      <h2>DALL·E Image Generator</h2>
-      <form onSubmit={handleSubmit} style={{ marginBottom: 16 }}>
+    <div className={"fadeInUp"} style={{ margin: '3rem auto', maxWidth: 600, background: '#181818', borderRadius: 12, boxShadow: '0 2px 12px #E5091440', padding: '2rem' }}>
+      <h2 className={styles.sectionTitle + ' goldGlow'}>DALL·E Image Generator</h2>
+      <form onSubmit={handleSubmit} style={{ marginBottom: 16, display: 'flex', gap: 8 }}>
         <input
           type="text"
           value={prompt}
           onChange={e => setPrompt(e.target.value)}
           placeholder="Describe your pizza or mafia scene..."
-          style={{ width: "70%", marginRight: 8 }}
+          style={{ flex: 1, borderRadius: 8, border: '1.5px solid #FFD700', padding: '0.7rem', fontSize: '1rem' }}
           required
         />
-        <button type="submit" disabled={loading || !prompt}>
+        <button type="submit" disabled={loading || !prompt} className={styles.ctaBtn + ' goldGlow fadeInUp'} style={{ minWidth: 120 }}>
           {loading ? "Generating..." : "Generate"}
         </button>
       </form>
       {error && <div style={{ color: "red" }}>{error}</div>}
       {imageUrl && (
         <div style={{ marginTop: 16 }}>
-          <img src={imageUrl} alt="DALL·E result" style={{ maxWidth: "100%", borderRadius: 8 }} />
+          <img src={imageUrl} alt="DALL·E result" style={{ maxWidth: "100%", borderRadius: 8, boxShadow: '0 2px 12px #FFD70099' }} />
         </div>
       )}
     </div>

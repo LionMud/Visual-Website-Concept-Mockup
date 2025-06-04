@@ -5,16 +5,17 @@ import menuItems from '../content/menu.json';
 
 export default function MenuPreview() {
   return (
-    <section className={styles.menuPreview} id="menu">
-      <h2 className={styles.sectionTitle}>The Family Recipes</h2>
+    <section className={styles.menuPreview + ' fadeInUp'} id="menu">
+      <h2 className={styles.sectionTitle + ' goldGlow'}>The Family Recipes</h2>
       <div className={styles.pizzaCards}>
         {menuItems.map((item, idx) => (
-          <PizzaCard
-            key={idx}
-            title={item.title}
-            image={item.image}
-            description={item.description}
-          />
+          <div className="fadeInUp" style={{ animationDelay: `${0.1 * idx + 0.2}s` }} key={idx}>
+            <PizzaCard
+              title={item.title}
+              image={item.image}
+              description={item.description}
+            />
+          </div>
         ))}
       </div>
     </section>

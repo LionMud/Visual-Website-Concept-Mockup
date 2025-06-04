@@ -24,10 +24,45 @@
   --------------------------------------
 */
 
+/* --- MODERN MAFIA UI ENHANCEMENTS --- */
+
+/* Subtle background texture overlay */
 .mafiaBg {
-  background: #0A0A0A;
+  background: linear-gradient(120deg, #0A0A0A 80%, #E50914 100%), url('/images/bg-texture.png');
+  background-blend-mode: overlay;
+  background-size: cover;
   color: #fff;
   font-family: 'Roboto Mono', monospace;
+}
+
+/* Neon glow utility */
+.neonGlow {
+  text-shadow: 0 0 8px #E50914, 0 0 32px #FFD700, 0 0 2px #fff;
+  filter: drop-shadow(0 0 8px #FFD700);
+}
+
+/* Gold glow utility */
+.goldGlow {
+  text-shadow: 0 0 8px #FFD700, 0 0 32px #FFD70099;
+  filter: drop-shadow(0 0 8px #FFD700);
+}
+
+/* Fade-in animation utility */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 1.1s cubic-bezier(.23,1.01,.32,1) forwards;
+}
+
+/* Parallax effect utility */
+.parallaxBg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero {
@@ -71,12 +106,27 @@
   box-shadow: 0 2px 12px #E5091440;
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+.ctaBtn::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle, #FFD70044 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
 .ctaBtn:hover {
   background: #FFD700;
   color: #0A0A0A;
   transform: scale(1.07);
   box-shadow: 0 6px 24px #FFD70099;
+}
+.ctaBtn:hover::after {
+  opacity: 1;
 }
 .scrollArrow {
   display: block;
@@ -116,12 +166,14 @@
   box-shadow: 0 4px 24px #000a;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   width: 260px;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.18s;
   cursor: pointer;
+  will-change: transform, box-shadow;
 }
 .pizzaCard:hover {
   border-color: #FFD700;
-  box-shadow: 0 0 32px #FFD70099;
+  box-shadow: 0 0 32px #FFD70099, 0 8px 32px #E5091440;
+  transform: translateY(-6px) scale(1.04) rotate(-1deg);
 }
 .pizzaCard img {
   width: 100%;
@@ -295,10 +347,24 @@
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
   box-shadow: 0 2px 8px #e6394633;
+  position: relative;
+  overflow: hidden;
+}
+.contactForm button::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle, #FFD70044 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
 .contactForm button:hover:enabled {
   transform: scale(1.05);
   box-shadow: 0 6px 24px #e6394644;
+}
+.contactForm button:hover::after {
+  opacity: 1;
 }
 .formStatus {
   margin-top: 0.5rem;
@@ -364,6 +430,7 @@
   color: #0A0A0A;
 }
 
+/* Responsive improvements */
 @media (max-width: 900px) {
   .pizzaCards {
     flex-direction: column;
@@ -381,4 +448,8 @@
 @media (max-width: 700px) {
   .contactSection { flex-direction: column; align-items: stretch; }
   .contactForm, .contactInfo { max-width: 98vw; }
+  .neonTitle { font-size: 2.1rem; }
+  .sectionTitle { font-size: 1.3rem; }
+  .pizzaCard { width: 98vw; max-width: 340px; }
+  section { margin-bottom: 2.2rem; padding: 1.2rem 0; }
 }

@@ -29,9 +29,9 @@ export default function MafiaNameForm() {
   }
 
   return (
-    <section className={styles.mafiaNameSection} id="mafia-name">
-      <h2 className={styles.sectionTitle} style={{ color: '#e63946' }}>Create Your Mafia Name</h2>
-      <p style={{ color: '#222', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
+    <section className={styles.mafiaNameSection + ' fadeInUp'} id="mafia-name">
+      <h2 className={styles.sectionTitle + ' goldGlow'}>Create Your Mafia Name</h2>
+      <p style={{ color: '#FFD700', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
         Enter your name and get your custom Pizza Mafia nickname, powered by AI.
       </p>
       <form onSubmit={handleSubmit} style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: '1rem', maxWidth: 400, margin: 'auto' }}>
@@ -41,13 +41,13 @@ export default function MafiaNameForm() {
           value={realName}
           onChange={e => setRealName(e.target.value)}
           required
-          style={{ padding: '0.7rem 1.2rem', borderRadius: '1rem', border: '1px solid #e63946', fontSize: '1.1rem', width: '100%', maxWidth: 300 }}
+          style={{ padding: '0.7rem 1.2rem', borderRadius: '1rem', border: '1px solid #FFD700', fontSize: '1.1rem', width: '100%', maxWidth: 300 }}
         />
-        <button type="submit" disabled={loading} style={{ background: '#e63946', color: '#fff', padding: '0.7rem 2rem', borderRadius: '2rem', fontSize: '1.1rem', fontFamily: 'Cinzel,serif', border: 'none', cursor: 'pointer', boxShadow: '0 2px 8px #e6394622' }}>
+        <button type="submit" disabled={loading} className={styles.ctaBtn + ' goldGlow fadeInUp'} style={{ borderRadius: '2rem', fontSize: '1.1rem', fontFamily: 'Cinzel,serif', marginTop: 8 }}>
           {loading ? 'Generating...' : 'Get Mafia Name'}
         </button>
       </form>
-      {mafiaName && <div style={{ marginTop: '1.2rem', fontSize: '1.2rem', color: '#e63946', fontFamily: 'Cinzel,serif' }}>{mafiaName}</div>}
+      {mafiaName && <div style={{ marginTop: '1.2rem', fontSize: '1.2rem', color: '#FFD700', fontFamily: 'Cinzel,serif' }}>{mafiaName}</div>}
       {error && <div style={{ color: 'red', marginTop: '1rem' }}>{error}</div>}
     </section>
   );

@@ -34,9 +34,9 @@ export default function ContactSection() {
   };
 
   return (
-    <section className={styles.contactSection} id="contact">
+    <section className={styles.contactSection + ' fadeInUp'} id="contact">
       <form className={styles.contactForm} onSubmit={handleSubmit}>
-        <h3>Contact / Order</h3>
+        <h3 className={styles.sectionTitle + ' goldGlow'}>Contact / Order</h3>
         <input
           name="name"
           type="text"
@@ -60,13 +60,13 @@ export default function ContactSection() {
           onChange={handleChange}
           required
         />
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading} className={styles.ctaBtn + ' goldGlow fadeInUp'}>
           {loading ? 'Sending...' : 'Send'}
         </button>
         {status && <div className={styles.formStatus}>{status}</div>}
       </form>
       <div className={styles.contactInfo}>
-        <h3>The Hideout</h3>
+        <h3 className={styles.goldGlow}>The Hideout</h3>
         <p>📍 Willemstad, Curaçao</p>
         <p>📞 (599) 9-PIZZA-MAFIA</p>
         <p>✉️ orders@thepizzamafia.cw</p>

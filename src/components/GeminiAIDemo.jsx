@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from '../styles/PizzaMafiaHome.module.css';
 
 export default function GeminiAIDemo() {
   const [prompt, setPrompt] = useState('Suggest a creative pizza topping.');
@@ -20,16 +21,16 @@ export default function GeminiAIDemo() {
   }
 
   return (
-    <section style={{background:'#0A0A0A',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
-      <h3>AI Demo (Gemini)</h3>
+    <section className={"fadeInUp"} style={{background:'#0A0A0A',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
+      <h3 className={styles.sectionTitle + ' goldGlow'}>AI Demo (Gemini)</h3>
       <form onSubmit={handleSubmit} style={{display:'flex',gap:'1rem',flexDirection:'column'}}>
         <input
           value={prompt}
           onChange={e => setPrompt(e.target.value)}
           placeholder="Ask Gemini anything..."
-          style={{padding:'0.7rem',borderRadius:'6px',border:'1.5px solid #e63946',fontSize:'1rem'}}
+          style={{padding:'0.7rem',borderRadius:'6px',border:'1.5px solid #FFD700',fontSize:'1rem'}}
         />
-        <button type="submit" disabled={loading} style={{background:'#e63946',color:'#fff',border:'none',padding:'0.8rem 1.5rem',borderRadius:'8px',fontWeight:'bold',fontSize:'1.1rem',cursor:'pointer'}}>
+        <button type="submit" disabled={loading} className={styles.ctaBtn + ' goldGlow fadeInUp'}>
           {loading ? 'Thinking...' : 'Ask Gemini'}
         </button>
       </form>

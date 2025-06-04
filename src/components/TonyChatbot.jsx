@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from '../styles/PizzaMafiaHome.module.css';
 
 export default function TonyChatbot() {
   const [messages, setMessages] = useState([
@@ -28,8 +29,8 @@ export default function TonyChatbot() {
   }
 
   return (
-    <section style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
-      <h3>Chat with Tony the Slice 🍕</h3>
+    <section className={"fadeInUp"} style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
+      <h3 className={styles.sectionTitle + ' goldGlow'}>Chat with Tony the Slice 🍕</h3>
       <div style={{minHeight:'120px',marginBottom:'1rem',background:'#fffbe6',color:'#222',padding:'1rem',borderRadius:'8px',maxHeight:'200px',overflowY:'auto'}}>
         {messages.filter(m => m.role !== 'system').map((m, i) => (
           <div key={i} style={{marginBottom:'0.5rem'}}>
@@ -43,9 +44,9 @@ export default function TonyChatbot() {
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="Say hi to Tony..."
-          style={{flex:1,padding:'0.7rem',borderRadius:'6px',border:'1.5px solid #e63946',fontSize:'1rem'}}
+          style={{flex:1,padding:'0.7rem',borderRadius:'6px',border:'1.5px solid #FFD700',fontSize:'1rem'}}
         />
-        <button type="submit" disabled={loading} style={{background:'#e63946',color:'#fff',border:'none',padding:'0.8rem 1.5rem',borderRadius:'8px',fontWeight:'bold',fontSize:'1.1rem',cursor:'pointer'}}>
+        <button type="submit" disabled={loading} className={styles.ctaBtn + ' goldGlow fadeInUp'}>
           Send
         </button>
       </form>
