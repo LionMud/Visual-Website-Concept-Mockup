@@ -32,7 +32,7 @@
   background-blend-mode: overlay;
   background-size: cover;
   color: #fff;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
 }
 
 /* Neon glow utility */
@@ -207,7 +207,7 @@
 }
 .storyText {
   flex: 2;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
   color: #fff;
   font-size: 1.1rem;
   line-height: 1.7;
@@ -254,7 +254,7 @@
 }
 .quote blockquote {
   color: #fff;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
   font-size: 1.2rem;
   background: #181818;
   border-left: 4px solid #E50914;
@@ -280,7 +280,7 @@
   color: #0A0A0A;
   font-size: 1.1rem;
   margin-top: 1rem;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
 }
 
 .contactSection {
@@ -300,7 +300,7 @@
 }
 .contactInfo {
   min-width: 220px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
   color: #FFD700;
   font-size: 1.1rem;
 }
@@ -430,13 +430,33 @@
   color: #0A0A0A;
 }
 
-/* Replace global section selector with a local class for CSS Modules purity */
-.mafiaSection {
-  margin-bottom: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+/* Cream/white section for color balance */
+.creamSection {
+  background: linear-gradient(120deg, #fffbe6 80%, #ffe082 100%);
+  color: #222;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #E5091440;
+  padding: 3rem 0 2rem 0;
+  margin: 3rem 0;
+  border: 0.5rem solid #fffbe6;
 }
 
+/* Italian flag accent border (left) */
+.italianAccent {
+  border-left: 10px solid #008C45; /* green */
+  border-right: 10px solid #CD212A; /* red */
+  border-top: 10px solid #fff; /* white */
+  border-radius: 18px;
+}
+
+/* Curaçao accent border (bottom) */
+.curacaoAccent {
+  border-bottom: 8px solid #003da5; /* blue */
+  border-top: 4px solid #ffd100; /* yellow */
+  border-radius: 18px;
+}
+
+/* Responsive improvements */
 @media (max-width: 900px) {
   .pizzaCards {
     flex-direction: column;
@@ -457,5 +477,5 @@
   .neonTitle { font-size: 2.1rem; }
   .sectionTitle { font-size: 1.3rem; }
   .pizzaCard { width: 98vw; max-width: 340px; }
-  .mafiaSection { margin-bottom: 2.2rem; padding: 1.2rem 0; }
+  section { margin-bottom: 2.2rem; padding: 1.2rem 0; }
 }
