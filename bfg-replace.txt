@@ -1,0 +1,3 @@
+# Replace OpenAI API keys in git history
+# Format: regex==replacement
+sk-[a-zA-Z0-9]{48}==REMOVED-OPENAI-KEY
