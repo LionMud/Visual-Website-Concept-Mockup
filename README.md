@@ -157,3 +157,5 @@ A bold, mafia-inspired pizza homepage built for storytelling and developer veloc
 ---
 
 *Welcome to the Family.*
+
+Last updated: June 4, 2025
