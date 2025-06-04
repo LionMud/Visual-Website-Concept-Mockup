@@ -22,4 +22,8 @@
 [context.deploy-preview.environment]
   NODE_ENV = "development"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 # All SPA and catch-all redirects removed for Next.js compatibility
+# Netlify Next.js plugin enabled for SSR/ISR and dynamic routes
