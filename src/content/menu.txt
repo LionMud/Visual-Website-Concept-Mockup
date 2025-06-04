@@ -1,0 +1,8 @@
+# Pizza Mafia Menu (Paste your extracted menu here)
+
+Classic NY Cheese
+Pepperoni Power
+Island Special
+Vegan Supreme
+
+(Add more menu items below as needed)

@@ -1,0 +1,384 @@
+/*
+  Pizza Mafia Home CSS Module
+  --------------------------------------
+  HOW TO USE:
+  1. Import this file in your React component:
+     import styles from '../styles/PizzaMafiaHome.module.css';
+  2. Use styles in your JSX:
+     <div className={styles.hero}> ... </div>
+  3. To add new styles:
+     - Add a new class below (e.g., .myNewClass { ... })
+     - Use it in your component: <div className={styles.myNewClass}>...</div>
+  4. All class names are locally scoped (no global conflicts).
+  5. For responsive tweaks, use the @media queries at the bottom.
+
+  EXAMPLE: Add your own style
+  .myCustomBox {
+    background: #FFD700;
+    color: #0A0A0A;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  --------------------------------------
+*/
+
+.mafiaBg {
+  background: #0A0A0A;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #0A0A0A 80%, #E50914 100%);
+  position: relative;
+  text-align: center;
+}
+.mascotHero {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px #000a);
+  margin-bottom: 1.5rem;
+}
+.neonTitle {
+  font-family: 'Cinzel Decorative', serif;
+  color: #E50914;
+  font-size: 3rem;
+  text-shadow: 0 0 8px #E50914, 0 0 32px #FFD700;
+  margin-bottom: 0.5rem;
+}
+.subTitle {
+  font-size: 1.2rem;
+  color: #FFD700;
+  margin-bottom: 2rem;
+}
+.ctaBtn {
+  background: #E50914;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: bold;
+  box-shadow: 0 2px 12px #E5091440;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ctaBtn:hover {
+  background: #FFD700;
+  color: #0A0A0A;
+  transform: scale(1.07);
+  box-shadow: 0 6px 24px #FFD70099;
+}
+.scrollArrow {
+  display: block;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-top: 2rem;
+  animation: bounce 1.2s infinite alternate;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(16px); }
+}
+
+.menuPreview {
+  background: #111;
+  padding: 4rem 0 2rem 0;
+  text-align: center;
+}
+.sectionTitle {
+  font-family: 'Cinzel Decorative', serif;
+  color: #FFD700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+.pizzaCards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pizzaCard {
+  background: #0A0A0A;
+  border: 2px solid #E50914;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #000a;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 260px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.pizzaCard:hover {
+  border-color: #FFD700;
+  box-shadow: 0 0 32px #FFD70099;
+}
+.pizzaCard img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px #E5091440;
+}
+.pizzaCard h3 {
+  font-family: 'Cinzel Decorative', serif;
+  color: #FFD700;
+  margin: 0.5rem 0 0.2rem 0;
+}
+.pizzaCard p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.storySection {
+  background: #181818;
+  padding: 4rem 0;
+}
+.storyGrid {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.storyText {
+  flex: 2;
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  background: #0A0A0A;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #E5091440;
+}
+.storyMascotSilhouette {
+  flex: 1;
+  opacity: 0.15;
+  filter: grayscale(1) blur(1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.storyMascotSilhouette img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.mascotReveal {
+  min-height: 60vh;
+  background: #0A0A0A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+}
+.mascotLarge {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 32px #E5091440);
+  margin-bottom: 1.5rem;
+}
+.quote h3 {
+  color: #FFD700;
+  font-family: 'Cinzel Decorative', serif;
+  margin-bottom: 0.5rem;
+}
+.quote blockquote {
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  background: #181818;
+  border-left: 4px solid #E50914;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.orderCta {
+  background: linear-gradient(90deg, #E50914 60%, #FFD700 100%);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0 2rem 0;
+}
+.headline {
+  font-family: 'Cinzel Decorative', serif;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.secondaryText {
+  color: #0A0A0A;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.contactSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+.mapEmbed {
+  width: 320px;
+  height: 220px;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #E5091440;
+}
+.contactInfo {
+  min-width: 220px;
+  font-family: 'Roboto Mono', monospace;
+  color: #FFD700;
+  font-size: 1.1rem;
+}
+.contactInfo h3 {
+  color: #FFD700;
+  font-family: 'Cinzel Decorative', serif;
+  margin-bottom: 0.5rem;
+}
+.jokeTagline {
+  color: #E50914;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+.contactForm {
+  background: #fffbe6;
+  border: 2px dashed #e63946;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #e6394612;
+  padding: 2rem 1.5rem;
+  min-width: 300px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contactForm input,
+.contactForm textarea {
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1.5px solid #e63946;
+  background: #fff;
+  resize: none;
+}
+.contactForm button {
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px #e6394633;
+}
+.contactForm button:hover:enabled {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px #e6394644;
+}
+.formStatus {
+  margin-top: 0.5rem;
+  color: #4caf50;
+  font-weight: bold;
+  background: #fffbe6;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px #e6394612;
+}
+
+.footer {
+  background: #0A0A0A;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  font-size: 1rem;
+  position: relative;
+}
+.easterEgg {
+  color: #FFD700;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+.easterEgg:hover .easterEggText {
+  color: #E50914;
+}
+.easterEggText em {
+  font-style: italic;
+  color: #E50914;
+}
+.socialLinks {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.stickyNav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0A0A0A;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.7rem 0 0.5rem 0;
+  box-shadow: 0 2px 8px #E5091440;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1rem;
+}
+.stickyNav a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.7rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.stickyNav a:hover, .stickyNav a.active {
+  background: #FFD700;
+  color: #0A0A0A;
+}
+
+@media (max-width: 900px) {
+  .pizzaCards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .storyGrid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .contactSection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 700px) {
+  .contactSection { flex-direction: column; align-items: stretch; }
+  .contactForm, .contactInfo { max-width: 98vw; }
+}

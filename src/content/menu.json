@@ -1,0 +1,17 @@
+[
+  {
+    "title": "The Capo",
+    "image": "capo.png",
+    "description": "Classic NYC slice with pepperoni power."
+  },
+  {
+    "title": "The Consigliere",
+    "image": "white-truffle.png",
+    "description": "White pie, strategic flavor."
+  },
+  {
+    "title": "The Enforcer",
+    "image": "meatlovers.png",
+    "description": "Stacked meats, no mercy."
+  }
+]
