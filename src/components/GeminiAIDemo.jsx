@@ -21,7 +21,7 @@ export default function GeminiAIDemo() {
   }
 
   return (
-    <section className={"fadeInUp"} style={{background:'#0A0A0A',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
+    <section className={"fadeInUp " + styles.mafiaSection} style={{background:'#0A0A0A',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
       <h3 className={styles.sectionTitle + ' goldGlow'}>AI Demo (Gemini)</h3>
       <form onSubmit={handleSubmit} style={{display:'flex',gap:'1rem',flexDirection:'column'}}>
         <input

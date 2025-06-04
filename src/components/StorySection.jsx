@@ -3,7 +3,7 @@ import about from '../content/sections/about.json';
 
 export default function StorySection() {
   return (
-    <section className={styles.storySection + ' fadeInUp'} id="story">
+    <section className={styles.storySection + ' fadeInUp ' + styles.mafiaSection} id="story">
       <h2 className={styles.sectionTitle + ' goldGlow'}>{about.title}</h2>
       <div className={styles.storyGrid}>
         <div className={styles.storyText}>

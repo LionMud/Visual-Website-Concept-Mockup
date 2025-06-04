@@ -34,7 +34,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className={styles.contactSection + ' fadeInUp'} id="contact">
+    <section className={styles.contactSection + ' fadeInUp ' + styles.mafiaSection} id="contact">
       <form className={styles.contactForm} onSubmit={handleSubmit}>
         <h3 className={styles.sectionTitle + ' goldGlow'}>Contact / Order</h3>
         <input

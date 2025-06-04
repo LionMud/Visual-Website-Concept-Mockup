@@ -2,7 +2,7 @@ import styles from '../styles/PizzaMafiaHome.module.css';
 
 export default function MascotReveal() {
   return (
-    <section className={styles.mascotReveal + ' fadeInUp'} id="don">
+    <section className={styles.mascotReveal + ' fadeInUp ' + styles.mafiaSection} id="don">
       <img
         src="/images/mafia-mascot.png"
         alt="The Don"

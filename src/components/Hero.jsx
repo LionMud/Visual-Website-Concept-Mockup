@@ -2,7 +2,7 @@ import styles from '../styles/PizzaMafiaHome.module.css';
 
 export default function Hero() {
   return (
-    <section className={styles.hero + ' ' + styles.parallaxBg} id="hero">
+    <section className={styles.hero + ' ' + styles.parallaxBg + ' ' + styles.mafiaSection} id="hero">
       <div
         style={{
           position: 'absolute',

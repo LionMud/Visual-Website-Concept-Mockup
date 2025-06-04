@@ -29,7 +29,7 @@ export default function MafiaNameForm() {
   }
 
   return (
-    <section className={styles.mafiaNameSection + ' fadeInUp'} id="mafia-name">
+    <section className={styles.mafiaNameSection + ' fadeInUp ' + styles.mafiaSection} id="mafia-name">
       <h2 className={styles.sectionTitle + ' goldGlow'}>Create Your Mafia Name</h2>
       <p style={{ color: '#FFD700', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
         Enter your name and get your custom Pizza Mafia nickname, powered by AI.

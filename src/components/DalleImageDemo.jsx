@@ -35,7 +35,7 @@ const DalleImageDemo = () => {
   };
 
   return (
-    <div className={"fadeInUp"} style={{ margin: '3rem auto', maxWidth: 600, background: '#181818', borderRadius: 12, boxShadow: '0 2px 12px #E5091440', padding: '2rem' }}>
+    <div className={"fadeInUp " + styles.mafiaSection} style={{ margin: '3rem auto', maxWidth: 600, background: '#181818', borderRadius: 12, boxShadow: '0 2px 12px #E5091440', padding: '2rem' }}>
       <h2 className={styles.sectionTitle + ' goldGlow'}>DALL·E Image Generator</h2>
       <form onSubmit={handleSubmit} style={{ marginBottom: 16, display: 'flex', gap: 8 }}>
         <input

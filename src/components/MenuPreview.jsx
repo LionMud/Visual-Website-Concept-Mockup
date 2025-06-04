@@ -5,7 +5,7 @@ import menuItems from '../content/menu.json';
 
 export default function MenuPreview() {
   return (
-    <section className={styles.menuPreview + ' fadeInUp'} id="menu">
+    <section className={styles.menuPreview + ' fadeInUp ' + styles.mafiaSection} id="menu">
       <h2 className={styles.sectionTitle + ' goldGlow'}>The Family Recipes</h2>
       <div className={styles.pizzaCards}>
         {menuItems.map((item, idx) => (

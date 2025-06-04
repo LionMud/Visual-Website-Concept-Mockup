@@ -21,7 +21,7 @@ export default function AIDemo() {
   }
 
   return (
-    <section className={"fadeInUp"} style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
+    <section className={"fadeInUp " + styles.mafiaSection} style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
       <h3 className={styles.sectionTitle + ' goldGlow'}>AI Demo (OpenAI GPT-4o-mini)</h3>
       <form onSubmit={handleSubmit} style={{display:'flex',gap:'1rem',flexDirection:'column'}}>
         <input

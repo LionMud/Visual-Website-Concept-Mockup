@@ -29,7 +29,7 @@ export default function TonyChatbot() {
   }
 
   return (
-    <section className={"fadeInUp"} style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
+    <section className={"fadeInUp " + styles.mafiaSection} style={{background:'#181818',color:'#FFD700',padding:'2rem',borderRadius:'12px',margin:'2rem auto',maxWidth:600}}>
       <h3 className={styles.sectionTitle + ' goldGlow'}>Chat with Tony the Slice 🍕</h3>
       <div style={{minHeight:'120px',marginBottom:'1rem',background:'#fffbe6',color:'#222',padding:'1rem',borderRadius:'8px',maxHeight:'200px',overflowY:'auto'}}>
         {messages.filter(m => m.role !== 'system').map((m, i) => (
