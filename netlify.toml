@@ -1,5 +1,5 @@
 # Netlify configuration for The Pizza Mafia
-# Modern Next.js/React, SPA routing, functions, and CMS
+# Modern Next.js/React, Netlify Functions, and best-practice config
 
 [build]
   command = "npm run build"
@@ -12,31 +12,6 @@
   port = 8888
   autoLaunch = true
 
-# API routes to Netlify Functions
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-# Next.js SSR/ISR/404 support
-[[redirects]]
-  from = "/_next/*"
-  to = "/_next/:splat"
-  status = 200
-
-# Serve static files and Next.js pages
-[[redirects]]
-  from = "/static/*"
-  to = "/static/:splat"
-  status = 200
-
-# Fallback to Next.js for all other routes (including 404)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
-
 [functions]
   node_bundler = "esbuild"
 
@@ -47,8 +22,4 @@
 [context.deploy-preview.environment]
   NODE_ENV = "development"
 
-# Netlify CMS (optional, for /admin)
-[[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
-  status = 200
+# All SPA and catch-all redirects removed for Next.js compatibility

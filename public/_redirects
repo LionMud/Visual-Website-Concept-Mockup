@@ -1,7 +1,1 @@
-/* Netlify SPA routing for React/Next.js */
-/*    /index.html   200
-/gallery/*   /NYP-Market-infographic/index.html   200
-/team/*      /NYP-Market-infographic/index.html   200
-/faq/*       /NYP-Market-infographic/index.html   200
-/*           /NYP-Market-infographic/index.html   200
-/index.html 200
+# (Removed SPA redirect for Next.js compatibility)
