@@ -1,0 +1,15 @@
+# Netlify CMS config for visual editing
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "images"
+public_folder: "/images"
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "NYP-Market-infographic/index.html"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
